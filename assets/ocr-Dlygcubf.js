@@ -1,0 +1,3 @@
+import{_ as i}from"./index-BLmqRtFJ.js";let t=null;async function s(n){return t||(t=(async()=>{const{createWorker:o}=await i(async()=>{const{createWorker:r}=await import("./index-C6xHUsg2.js").then(c=>c.i);return{createWorker:r}},[],import.meta.url),e=new URL("./ocr/",location.href).href;return o(["deu","eng"],1,{workerPath:e+"worker.min.js",corePath:e,langPath:e,gzip:!0,workerBlobURL:!1,logger:r=>{r.status==="recognizing text"&&a&&a(r.progress)}})})(),t.catch(()=>{t=null})),a=n,t}let a=null;async function u(n,o){const e=await s(o),{data:r}=await e.recognize(n);return(r.text||"").replace(/\n{3,}/g,`
+
+`).trim()}export{u as recognize};
